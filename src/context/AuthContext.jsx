@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 import { toast } from "react-toastify";
 import { Navigate } from "react-router-dom";
-import { supabase } from "../services/Supabase";
+import { supabase } from "../services/supabase";
 
 
 

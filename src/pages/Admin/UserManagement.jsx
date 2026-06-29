@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { supabase } from "../../services/Supabase";
+import { supabase } from "../../services/supabase";
 
 
 

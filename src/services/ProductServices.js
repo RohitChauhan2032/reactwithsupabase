@@ -1,4 +1,4 @@
-import { supabase } from "./Supabase";
+import { supabase } from "./supabase";
 
 
 
