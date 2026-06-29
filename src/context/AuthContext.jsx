@@ -43,13 +43,13 @@ return subscription;
 
   // signup
   const Signup = async (name, email, phone, age, password) => {
-    const { data, error } = await Supabase.auth.signUp({ name, email, phone, age, password });
+    const { data, error } = await supabase.auth.signUp({ name, email, phone, age, password });
     if (error) {
       console.log(error.message);
       return { data: null, error: error.message };
     } else {
       console.log(data.user);
-      const {error:insertError} = await Supabase.from('users').insert({
+      const {error:insertError} = await supabase.from('users').insert({
         id: data.user.id,
       email,
       name,
