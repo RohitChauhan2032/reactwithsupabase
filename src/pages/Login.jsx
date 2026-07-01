@@ -36,18 +36,18 @@ const Login = () => {
 
   return (
     <div>
-        <form onSubmit={loginSubmit}>
-            <div>
+        <form onSubmit={loginSubmit}  className="place-items-center  mt-10 flex flex-col gap-3" >
+            <div className="flex gap-2">
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="" value={email} onChange={(e)=>setEmail(e.target.value)} />
+                <input type="email" name="email" id="" value={email} onChange={(e)=>setEmail(e.target.value)} className="border border-gray-300  rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
-            <div>
+            <div className="flex gap-2">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="" value={password} onChange={(e)=>setPassword(e.target.value)} />
+                <input type="password" name="password" id="" value={password} onChange={(e)=>setPassword(e.target.value)} className="border border-gray-300  rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
             <div>
-            <button type="submit" disabled={loading}>{loading ? "Signing..." : "Login"}</button>
-            <p>Don't have an account? <Link to={'/signup'}>Signup here</Link> </p>
+            <button type="submit" className="bg-blue-500 text-white py-1.5 px-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 ml-15"  disabled={loading}>{loading ? "Signing..." : "Login"}</button>
+            <p>Don't have an account? <Link to={'/signup'} className="text-blue-500 hover:underline">Signup here</Link> </p>
                
             </div>
         </form>

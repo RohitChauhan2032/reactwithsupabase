@@ -44,30 +44,30 @@ const Signup = () => {
 
   return (
     <div>
-        <form onSubmit={registerSubmit}>
-            <div>
+        <form onSubmit={registerSubmit} className="flex flex-col gap-2  place-items-center  mt-10"  >
+            <div className="flex gap-2">
                 <label htmlFor="name">name</label>
-                <input type="name" name="name" id="" value={formData.name}  onChange={handleInputChange} />
+                <input type="name" name="name"  id="" placeholder="Enter your Name" value={formData.name}  onChange={handleInputChange} className="border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
-            <div>
+            <div className="flex gap-2" >
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="" value={formData.email} onChange={handleInputChange}  />
+                <input type="email" name="email" id="" value={formData.email} onChange={handleInputChange}  className="border border-gray-300  rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
-            <div>
-                <label htmlFor="phone">Phone</label>
-                <input type="tel" name="phone" id="" value={formData.phone} onChange={handleInputChange} />
+            <div className="flex gap-2">
+                <label htmlFor="phone" >Phone</label>
+                <input type="tel" name="phone" id="" placeholder="Enter your number" value={formData.phone} onChange={handleInputChange} className="border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"/>
             </div>
-            <div>
+            <div className="flex gap-2">
                 <label htmlFor="age">Age</label>
-                <input type="number" name="age" id="" value={formData.age} onChange={handleInputChange}  />
+                <input type="number" name="age" id="" placeholder="Enter your age" value={formData.age} onChange={handleInputChange} className="border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
-            <div>
+            <div className="flex gap-2">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="" value={formData.password} onChange={handleInputChange} />
+                <input type="password" name="password" id="" value={formData.password} onChange={handleInputChange}   className="border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
             <div>
-            <button type="submit" disabled={loading}>{loading ? "Signing up..." : "Sign Up"}</button>
-                <p>Already have an account? <Link to="/login">Login</Link></p>
+            <button type="submit" className="bg-blue-500 text-white py-1.5 px-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 ml-15" disabled={loading}>{loading ? "Signing up..." : "Sign Up"  }</button>
+                <p>Already have an account? <Link to="/login"  className="text-blue-500 hover:underline">Login</Link></p>
             </div>
         </form>
     </div>

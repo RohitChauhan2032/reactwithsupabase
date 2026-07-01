@@ -5,8 +5,8 @@ import { Counter } from '../component/counter'
 const Home = () => {
   return (
     <div>
-        home
-        <Counter/>
+        
+        {/* <Counter/> */}
         
     </div>
   )

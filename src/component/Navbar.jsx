@@ -24,7 +24,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <Link to={'/'}>Navbar</Link>
+      <div  className="flex justify-between  text-4xl">
+        <Link to={'/'}>logo</Link>
       <div>
         <Link to="/services">Services</Link>
         <Link to="/about">About</Link>
@@ -38,6 +39,7 @@ const Navbar = () => {
             <Link to="/login">Login</Link>
           )
         }
+      </div>
       </div>
     </div>
   )
